@@ -1,39 +1,317 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-  <header class="header">
-    <div class="header__content">
-      <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="alt"/></a></div>
-      <nav class="header__right">
-        <ul class="navbar">
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 0</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 1</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 2</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 3</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 4</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="main_content">
-    <div class="container_center">
-      <div class="grid">
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, in.</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam sequi officiis. Quia sed modi voluptatem, aut rem possimus at ipsa nobis iure non corporis nulla suscipit praesentium quos numquam quasi magni delectus eius illo, harum hic id! Laboriosam culpa recusandae nesciunt ab natus molestiae porro reiciendis, eveniet architecto temporibus!</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugiat, pariatur, explicabo ut quidem deleniti velit sed error dolor! Voluptates dignissimos consectetur repudiandae ipsam. Iusto, rerum, quam! Corporis, nisi, inventore?</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.4"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__top">
+          <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="alt"/></a></div>
+          <div class="header__right">
+            <div class="action">
+              <div class="action__item">
+                <div class="action__icon"><a class="icon_place" href="#"></a></div>
+                <div class="action__text desktop"><a class="action__top action__top_place" href="#">Москва и Московская область</a>
+                  <div class="action__bottom">
+                    <div class="action__label">Время работы:</div>
+                    <div class="action__props">Пн-Вс 7<small>00</small>-20<small>00</small></div>
+                  </div>
+                </div>
+              </div>
+              <div class="action__item">
+                <div class="action__icon"><a class="icon_phone" href="tel: 8 499 444-21-96"></a></div>
+                <div class="action__text desktop"><a class="action__top action__top_tel" href="tel: 8 499 444-21-96">8 499 444-21-96</a>
+                  <div class="action__bottom">
+                    <div class="action__label">прием заявок 24/7</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="callback desktop">
+              <button class="btn" type="button">Обратный звонок</button>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="navbar__toggle"></div>
+          <nav class="nav">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link active" href="index.html">Главная</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="">Сервис септиков</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="">Каталог септиков</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="">Запчасти</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="">Частые вопросы</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="">Галерея работ</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="">Контакты</a></li>
+              <li class="navbar__item"><a class="navbar__link navbar__link_action" href="">Акциии</a></li>
+            </ul>
+            <div class="nav__bottom mobile"><a class="action__top action__top_tel" href="tel: 8 499 444-21-96">8 499 444-21-96</a>
+              <div class="callback">
+                <button class="btn" type="button">Обратный звонок</button>
+              </div>
+              <div class="soc"><a class="icon_fb" href="#"> </a><a class="icon_instagram" href="#"> </a><a class="icon_linkedin" href="#"> </a></div>
+            </div>
+          </nav>
+        </div>
       </div>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="container_center">
-      <p></p>&copy; 2016 |<i class="fa fa-github" aria-hidden="true">&nbsp;</i><a href="#">View Source</a>
-    </div>
-  </footer>
-</body>
+    </header>
+    <main class="main_content">
+      <div class="pageTop pageTop_home">
+        <div class="container_center">
+          <!-- begin fScreen-->
+          <div class="fScreen">
+            <div class="fScreen__left">
+              <h1 class="fScreen__title">Сервис, ремонт <br>и продажа септиков</h1>
+              <div class="fScreen__sub">команда профессионалов, готовых помочь в решении Ваших вопросах связанных с канализацией в загородном доме, даче, коттедже.</div>
+              <div class="fScreen__form">
+                <form class="form" action="#">
+                  <div class="form__row form__row_inline">
+                    <input type="tel" placeholder="Ваш номер телефона"/>
+                    <button class="btn btn_primary" type="submit">Вызов мастера</button>
+                  </div>
+                </form>
+              </div>
+              <div class="fScreen__info desktop">
+                <div class="fScreen__item">
+                  <div class="fScreen__icon"><img src="img/like.png" alt=""/></div>
+                  <div class="fScreen__name">Экспертный персонал</div>
+                </div>
+                <div class="fScreen__item">
+                  <div class="fScreen__icon"><img src="img/speed.png" alt=""/></div>
+                  <div class="fScreen__name">Высокая скорость работы</div>
+                </div>
+                <div class="fScreen__item">
+                  <div class="fScreen__icon"><img src="img/gears.png" alt=""/></div>
+                  <div class="fScreen__name">Ремонт любой сложности</div>
+                </div>
+              </div>
+            </div>
+            <div class="fScreen__right desktop"><img src="img/man.png" alt="alt"/></div>
+          </div>
+          <!-- end fScreen-->
+        </div>
+      </div>
+      <div class="container_center">
+        <!-- begin infoBoxes-->
+        <div class="infoBoxes">
+          <div class="infoBoxes__item"><a class="infoBoxes__wrap" href="#"><span class="infoBoxes__icon"><i class="icon_cogwheel"></i></span><span class="infoBoxes__name">Обслуживание септиков</span></a></div>
+          <div class="infoBoxes__item"><a class="infoBoxes__wrap" href="#"><span class="infoBoxes__icon"><i class="icon_pump"></i></span><span class="infoBoxes__name">Чистка септиков</span></a></div>
+          <div class="infoBoxes__item"><a class="infoBoxes__wrap" href="#"><span class="infoBoxes__icon"><i class="icon_support"></i></span><span class="infoBoxes__name">Ремонт септиков</span></a></div>
+          <div class="infoBoxes__item"><a class="infoBoxes__wrap" href="#"><span class="infoBoxes__icon"><i class="icon_soldering"></i></span><span class="infoBoxes__name">Пайка септиков</span></a></div>
+          <div class="infoBoxes__item"><a class="infoBoxes__wrap" href="#"><span class="infoBoxes__icon"><i class="icon_resize"></i></span><span class="infoBoxes__name">Наращивание септиков</span></a></div>
+        </div>
+        <!-- end infoBoxes-->
+        <h2 class="subtitle subtitle_center">Продажа оборудования</h2>
+        <!-- begin equipmentSales-->
+        <div class="equipmentSales">
+          <div class="equipmentSales__item"><a class="equipmentSales__wrap" href="#"><span class="equipmentSales__img"><img src="img/eqi-1.png" alt=""/></span><span class="equipmentSales__title">Компрессора HIBLOW</span><span class="equipmentSales__more">Подробнее</span></a></div>
+          <div class="equipmentSales__item"><a class="equipmentSales__wrap" href="#"><span class="equipmentSales__img"><img src="img/eqi-5.png" alt=""/></span><span class="equipmentSales__title">Блоки управления</span><span class="equipmentSales__more">Подробнее</span></a></div>
+          <div class="equipmentSales__item"><a class="equipmentSales__wrap" href="#"><span class="equipmentSales__img"><img src="img/eqi-2.png" alt=""/></span><span class="equipmentSales__title">Насосы для септиков</span><span class="equipmentSales__more">Подробнее</span></a></div>
+          <div class="equipmentSales__item"><a class="equipmentSales__wrap" href="#"><span class="equipmentSales__img"><img src="img/eqi-3.png" alt=""/></span><span class="equipmentSales__title">Электромагнитные клапана</span><span class="equipmentSales__more">Подробнее</span></a></div>
+          <div class="equipmentSales__item"><a class="equipmentSales__wrap" href="#"><span class="equipmentSales__img equipmentSales__img_full"><img src="img/eqi-4.png" alt=""/></span><span class="equipmentSales__title">Пластик для наращивания септика</span><span class="equipmentSales__more">Подробнее</span></a></div>
+          <div class="equipmentSlider">
+            <div class="equipmentSlider__item">
+              <div class="equipmentSlider__img"><img src="img/eqi-slide.png" alt="alt"/>
+                <div class="equipmentSlider__price">24 000 ₽</div>
+              </div>
+              <div class="equipmentSlider__title">Компрессор для септика HIBLOW HP-100</div>
+              <div class="equipmentSlider__text">
+                <p>Компрессор (воздушный насос) HIBLOW HP-100 производительностью от 100 л/мин при давлении 147 мбар (14,7 кПа).</p><span>Применяется также для подачи воздуха в:</span>
+                <ul class="list">
+                  <li>системы биологической очистки, септики;</li>
+                  <li>локальные очистные сооружения (ЛОС);</li>
+                  <li>системы глубокой очистки;</li>
+                </ul>
+              </div>
+              <div class="equipmentSlider__more"><a class="btn btn_primary" href="#">Узнать больше</a></div>
+            </div>
+            <div class="equipmentSlider__item">
+              <div class="equipmentSlider__img"><img src="img/eqi-slide.png" alt="alt"/>
+                <div class="equipmentSlider__price">24 000 ₽</div>
+              </div>
+              <div class="equipmentSlider__title">Компрессор для септика HIBLOW HP-100</div>
+              <div class="equipmentSlider__text">
+                <p>Компрессор (воздушный насос) HIBLOW HP-100 производительностью от 100 л/мин при давлении 147 мбар (14,7 кПа).</p><span>Применяется также для подачи воздуха в:</span>
+                <ul class="list">
+                  <li>системы биологической очистки, септики;</li>
+                  <li>локальные очистные сооружения (ЛОС);</li>
+                  <li>системы глубокой очистки;</li>
+                </ul>
+              </div>
+              <div class="equipmentSlider__more"><a class="btn btn_primary" href="#">Узнать больше</a></div>
+            </div>
+            <div class="equipmentSlider__item">
+              <div class="equipmentSlider__img"><img src="img/eqi-slide.png" alt="alt"/>
+                <div class="equipmentSlider__price">24 000 ₽</div>
+              </div>
+              <div class="equipmentSlider__title">Компрессор для септика HIBLOW HP-100</div>
+              <div class="equipmentSlider__text">
+                <p>Компрессор (воздушный насос) HIBLOW HP-100 производительностью от 100 л/мин при давлении 147 мбар (14,7 кПа).</p><span>Применяется также для подачи воздуха в:</span>
+                <ul class="list">
+                  <li>системы биологической очистки, септики;</li>
+                  <li>локальные очистные сооружения (ЛОС);</li>
+                  <li>системы глубокой очистки;</li>
+                </ul>
+              </div>
+              <div class="equipmentSlider__more"><a class="btn btn_primary" href="#">Узнать больше</a></div>
+            </div>
+            <div class="equipmentSlider__item">
+              <div class="equipmentSlider__img"><img src="img/eqi-slide.png" alt="alt"/>
+                <div class="equipmentSlider__price">24 000 ₽</div>
+              </div>
+              <div class="equipmentSlider__title">Компрессор для септика HIBLOW HP-100</div>
+              <div class="equipmentSlider__text">
+                <p>Компрессор (воздушный насос) HIBLOW HP-100 производительностью от 100 л/мин при давлении 147 мбар (14,7 кПа).</p><span>Применяется также для подачи воздуха в:</span>
+                <ul class="list">
+                  <li>системы биологической очистки, септики;</li>
+                  <li>локальные очистные сооружения (ЛОС);</li>
+                  <li>системы глубокой очистки;</li>
+                </ul>
+              </div>
+              <div class="equipmentSlider__more"><a class="btn btn_primary" href="#">Узнать больше</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- end equipmentSales-->
+        <!-- begin gallery-->
+        <div class="gallery">
+          <div class="gallery__slide">
+            <div class="gallery__item">
+              <div class="gallery__img" style="background-image: url(img/gallery-1.jpg)"></div>
+              <div class="gallery__name">Монтаж ТОПАС-100, Московская область</div>
+            </div>
+            <div class="gallery__item gallery__item_half">
+              <div class="gallery__img" style="background-image: url(img/gallery-2.jpg)"></div>
+              <div class="gallery__name">Восстановление септика</div>
+            </div>
+            <div class="gallery__item gallery__item_half">
+              <div class="gallery__img" style="background-image: url(img/gallery-3.jpg)"></div>
+              <div class="gallery__name">Перенос септика ТОПАС-5</div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery__img" style="background-image: url(img/gallery-4.jpg)"></div>
+              <div class="gallery__name">Монтаж ТОПАС-100, Московская область</div>
+            </div>
+          </div>
+          <div class="gallery__descr">
+            <div class="gallery__title">SERVICE-SEPTIC<span>.RU</span></div>
+            <p><b>команда профессионалов, готовых помочь в решении Ваших вопросах связанных с канализацией в загородном доме, даче, коттедже.</b></p><span><b>Услуги которые мы предоставляем: </b></span>
+            <ul>
+              <li>обслуживание септиков;</li>
+              <li>ремонт септиков;</li>
+              <li>наращивание горловин;</li>
+              <li>монтаж канализации под ключ;</li>
+              <li>запчасти(продажа и замена);</li>
+              <li>модернизация станций.</li>
+            </ul><span><b>Работаем с большинством современных станций очистки:</b>
+              <ul>
+                <li>«ТОПАС», «ТОПАЭРО», «ТОПАС-С» компании ТОПОЛ-ЭКО</li>
+                <li>«АСТРА» компании ЮНИЛОС</li>
+                <li>«ЕВРОБИОН»</li>
+                <li>«БИОКСИ»</li>
+                <li>«ЕВРОЛОС-БИО», «ЕВРОЛОС-ГРУНТ»</li>
+                <li>«ДЕКА», «БИОДЕКА»</li>
+                <li>«ТОПОЛЬ» компании ЭКО-ГРАНД</li>
+              </ul></span>
+            <p><b>Заказать любую из этих услуг или получить консультацию <br></b>в Москве и Московской области можно по телефону 8(499)444-21-96 или оставить заявку на сайте и мы Вам перезвоним.</p>
+            <div class="gallery__action"><a class="btn btn_border" href="#">Галерея наших работ</a></div>
+          </div>
+        </div>
+        <!-- end gallery-->
+      </div>
+      <!-- begin consutation-->
+      <div class="consutation">
+        <div class="container_center">
+          <h2 class="subtitle subtitle_center">Хотите проконсультироваться с нашим специалистом?</h2>
+          <div class="consutation_sub">оставьте заявку прямо сейчас и получите скидку  <span>15%</span></div>
+          <form class="form" action="#">
+            <div class="form__row form__row_inline">
+              <input type="tel" placeholder="Ваш номер телефона"/>
+              <button class="btn btn_primary" type="submit">Вызов мастера</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- end consutation-->
+      <!-- begin postsList-->
+      <div class="posts">
+        <div class="container_center">
+          <h2 class="subtitle subtitle_center">Статьи</h2>
+          <div class="postsList"><a class="postsList__item" href="#">Как работают препараты для очистки септиков</a><a class="postsList__item" href="#">Куда сливать воду из септика</a><a class="postsList__item" href="#">Септик для высокого уровня грунтовых вод</a><a class="postsList__item" href="#">Отличие септика от автономной канализации</a></div>
+          <div class="postsList__more"><a class="btn btn_border" href="#">Больше статей</a></div>
+        </div>
+      </div>
+      <!-- end postsList-->
+    </main>
+    <footer class="footer">
+      <div class="container_center">
+        <div class="footer__content">
+          <div class="footer__left"><a class="logo" href="index.html"><img src="img/logo-contrast.png" alt=""/></a>
+            <div class="soc"><a class="icon_fb" href="#"> </a><a class="icon_instagram" href="#"> </a><a class="icon_linkedin" href="#"> </a></div>
+            <div class="copy desktop">© 2019 Все права защищены.</div>
+          </div>
+          <div class="footer__center desktop">
+            <div class="footerNav">
+              <div class="footerNav__item">
+                <div class="footerNav__title">Компания</div>
+                <ul>
+                  <li><a href="#">Главная</a></li>
+                  <li><a href="#">Частые вопросы</a></li>
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="footerNav__item">
+                <div class="footerNav__title">Сервис</div>
+                <ul>
+                  <li><a href="#">Сервис септиков</a></li>
+                  <li><a href="#">Купить септик</a></li>
+                  <li><a href="#">Запчасти</a></li>
+                  <li><a href="#">Наши объекты</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="action">
+              <div class="action__item">
+                <div class="action__icon desktop"><a class="icon_phone" href="tel: 8 499 444-21-96"></a></div>
+                <div class="action__text"><a class="action__top action__top_tel" href="tel: 8 499 444-21-96">8 499 444-21-96</a>
+                  <div class="action__bottom">
+                    <div class="action__label">прием заявок 24/7</div>
+                  </div>
+                </div>
+                <div class="callback desktop">
+                  <button class="btn" type="button">Обратный звонок</button>
+                </div>
+              </div>
+              <div class="action__item">
+                <div class="action__icon desktop">
+                  <div class="icon_place"></div>
+                </div>
+                <div class="action__text"><a class="action__top action__top_place" href="#">Москва и Московская область</a>
+                  <div class="action__bottom">
+                    <div class="action__label">Время работы:</div>
+                    <div class="action__props">Пн-Вс 7<small>00</small>-20<small>00</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="callback mobile">
+            <button class="btn" type="button">Обратный звонок</button>
+          </div>
+          <div class="copy mobile">© 2019 Все права защищены.</div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/function.js?0.4"></script>
+  </body>
+</html>

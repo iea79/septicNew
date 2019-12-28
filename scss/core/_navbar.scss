@@ -4,19 +4,88 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: flex;
+	font-size: 0.875em;
+	font-weight: 700;
 
-	&__item {
-		// display: inline-block;
-		margin: 5px;
+	@media (min-width: 768px) {
+		display: flex;
+		box-shadow: 0.063rem 0.438rem 2rem 0.063rem rgba(4, 79, 146, 0.86);
+		border-radius: 0.25rem;
+		background-color: #044f92;
+		text-align: center;
 	}
 
-	&__link {}
+	&__item {
+
+		@media (min-width: 768px) {
+			flex-grow: 1;
+			// display: inline-block;
+			// margin: 5px;
+			&:first-child {
+				a {
+					border-radius: 0.25em 0 0 0.25em;
+				}
+			}
+
+			&:last-child {
+				a {
+					border-radius: 0 0.25em 0.25em 0;
+				}
+			}
+
+			&:nth-child(n+2) {
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					width: 0.063em;
+					background-color: #ffffff;
+					opacity: 0.1;
+				}
+			}
+		}
+	}
+
+	&__link {
+		color: #ffffff;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 1.4em 1em;
+		display: block;
+
+		@media (min-width: 768px) {
+			padding: 1.6em 0.3em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			white-space: nowrap;
+		}
+
+		&:hover {
+			background-color: transparentize(#1b8ec4, 0.7);
+		}
+
+		&.active {
+			background-color: transparentize(#1b8ec4, 0.5);
+		}
+
+		&_action {
+			background-color: #7cab19;
+
+			&:hover {
+				background-color: darken(#7cab19, 5%);
+			}
+		}
+	}
 
 	&__toggle {
 		@media (max-width: 767px) {
 			position: absolute;
-			color: #00aed4;
+			color: #044f92;
 			border-top: 0.2em solid;
 			border-bottom: 0.2em solid;
 			left: 1.3em;
@@ -42,6 +111,7 @@
 			&.active {
 				border-top-color: transparent;
 				border-bottom-color: transparent;
+				color: #7cab19;
 
 				&:before {
 					transform: rotate(45deg);
@@ -65,15 +135,36 @@
 		left: -300px;
 		top: 0;
 		bottom: 0;
-		background-color: $color_withe;
 		width: 300px;
 		z-index: 10;
 		overflow: hidden;
-		padding: 5em 1em 2em;
+		padding: 5em 0 0;
 		transition: left 0.3s;
 		box-shadow: 0 0 1em rgba(#000, .1);
+		background-color: #044f92;
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
+		// justify-content: space-between;
 
-		&.open {
+		&__bottom {
+			padding: 2em 1em 1.5em;
+		}
+
+		.navbar {
+			flex-grow: 1;
+		}
+
+		.callback {
+			margin: 0.5em 0 1em;
+		}
+
+		.action__top_tel {
+			color: $color_withe;
+
+		}
+
+		.header__bottom.open & {
 			left: 0;
 		}
 	}

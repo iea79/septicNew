@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'septic';
+    src: url("../fonts/septic.ttf?kq29aw") format('truetype'), url("../fonts/septic.woff?kq29aw") format('woff'), url("../fonts/septic.svg?kq29aw#septic") format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon_"],
+[class*=" icon_"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'septic' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_fb:before {
+    content: "\e900";
+}
+
+.icon_twitter:before {
+    content: "\e901";
+}
+
+.icon_whatsapp:before {
+    content: "\e902";
+}
+
+.icon_groupme:before {
+    content: "\e903";
+}
+
+.icon_kik:before {
+    content: "\e904";
+}
+
+.icon_skype:before {
+    content: "\e905";
+}
+
+.icon_periscope:before {
+    content: "\e906";
+}
+
+.icon_youtube:before {
+    content: "\e907";
+}
+
+.icon_itunes:before {
+    content: "\e908";
+}
+
+.icon_linkedin:before {
+    content: "\e909";
+}
+
+.icon_instagram:before {
+    content: "\e90a";
+}
+
+.icon_messenger:before {
+    content: "\e90b";
+}
+
+.icon_twitter-1:before {
+    content: "\e90c";
+}
+
+.icon_snapchat:before {
+    content: "\e90d";
+}
+
+.icon_reddit:before {
+    content: "\e90e";
+}
+
+.icon_back:before {
+    content: "\e90f";
+}
+
+.icon_download:before {
+    content: "\e910";
+}
+
+.icon_next:before {
+    content: "\e911";
+}
+
+.icon_upload:before {
+    content: "\e912";
+}
+
+.icon_pump:before {
+    content: "\e913";
+}
+
+.icon_cogwheel:before {
+    content: "\e914";
+}
+
+.icon_support:before {
+    content: "\e915";
+}
+
+.icon_resize:before {
+    content: "\e916";
+}
+
+.icon_soldering:before {
+    content: "\e917";
+}
+
+.icon_phone:before {
+    content: "\e918";
+}
+
+.icon_email:before {
+    content: "\e919";
+}
+
+.icon_place:before {
+    content: "\e91a";
+}

@@ -1,16 +1,17 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Open Sans";
+$main_font_family: "Montserrat";
+$seccond_font_family: "Gilroy";
 $main_color: #000;
 $main_line_height: 1.2;
 $main_font_size: 16px;
 
-$container_width: 1200px;
+$container_width: 72.5rem;
 
-$footer_height: 60px;
+$footer_height: 0;
 
 // Color collection for elements
-$color_primary: #7b8287;
+$color_primary: #30b8f8;
 $color_success: #36a566;
 $color_info: #03a9f4;
 $color_warning: #fca33e;
@@ -27,7 +28,7 @@ $el-colors: (
 
 /* Grid */
 /* ======================================================================== */
-$grid_padding: 20px;
+$grid_padding: 1.2em;
 
 /* Form */
 /* ======================================================================== */

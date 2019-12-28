@@ -41,6 +41,30 @@ $(document).ready(function() {
 
     checkOnResize();
 
+    $('.equipmentSlider').slick({
+        dots: true,
+        arrows: false,
+        fade: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    fade: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+
 });
 
 $(window).resize(function(event) {
@@ -54,6 +78,19 @@ $(window).resize(function(event) {
 
 function checkOnResize() {
     // fontResize();
+    if (isXsWidth()) {
+        if (!$('.gallery__slide').hasClass('slick-initialized')) {
+            $('.gallery__slide')
+                .slick({
+                    dots: true,
+                    arrows: false
+                })
+                .insertBefore('.gallery__action');
+        }
+    } else {
+        $('.gallery__slide.slick-initialized').slick('unslick');
+        $('.gallery__slide').insertBefore('.gallery__descr');
+    }
 }
 
 // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
@@ -94,9 +131,10 @@ function stikyMenu() {
 
 function openMobileNav() {
     $('.navbar__toggle').on('click', function() {
-        var wrapp = $('.nav');
+        var wrapp = $('.header__bottom');
 
         wrapp.toggleClass('open');
+        $(this).toggleClass('active')
     });
 };
 openMobileNav();
@@ -110,16 +148,6 @@ function srollToId() {
         }
         return false;
     });
-}
-
-function fontResize() {
-    var windowWidth = $(window).width();
-    if (windowWidth >= 1200) {
-    	var fontSize = windowWidth/19.05;
-    } else if (windowWidth < 1200) {
-    	var fontSize = 60;
-    }
-	$('body').css('fontSize', fontSize + '%');
 }
 
 // Проверка направления прокрутки вверх/вниз

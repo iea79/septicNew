@@ -1,13 +1,135 @@
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {
-	// font-size: $main_font_size;
-	position: relative;
-	// height: $footer_height;
-	background: #BFF08E;
-	// @extend %clear_all;
-	.container_center {
-		// padding-top: 10px;
-		// padding-bottom: 10px;
+	color: $color_withe;
+	background-color: #003e75;
+	padding: 3em 0 2em;
+	// min-height: 28.4em;
+
+	@media (min-width: 768px) {
+		padding: 4.3em 0 3em;
 	}
+
+	&__content {
+		text-align: center;
+
+		@media (min-width: 768px) {
+			text-align: left;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__left {
+
+		@media (min-width: 768px) {
+			width: 25.8%;
+			padding-right: 2em;
+			flex: none;
+		}
+	}
+
+	&__center {
+		padding-top: 0;
+		flex-grow: 1;
+	}
+
+	&Nav {
+		@media (min-width: 768px) {
+			display: flex;
+
+			&__item {
+				margin-right: 4.7em;
+			}
+
+			&__title {
+				font-size: 1em;
+				font-weight: 700;
+				// line-height: 3.13;
+				text-transform: uppercase;
+				margin-bottom: 1.3em;
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					margin-bottom: 0.8em;
+
+					a {
+						color: #289fda;
+						font-size: 0.875em;
+						text-decoration: none;
+						white-space: nowrap;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	&__right {
+
+		@media (min-width: 768px) {
+			width: 34.3%;
+			flex: none;
+		}
+	}
+
+	.soc {
+		margin: 1em 0;
+
+		@media (max-width: 767px) {
+			justify-content: center;
+			margin-bottom: 2em;
+		}
+	}
+
+	.action {
+
+		@media (min-width: 768px) {
+			flex-wrap: wrap;
+		}
+
+		@media (max-width: 767px) {
+			display: block;
+		}
+
+		&__item {
+			margin-right: 0;
+			margin-bottom: 2.1em;
+
+			@media (max-width: 767px) {
+				display: block;
+			}
+		}
+
+		&__icon {}
+
+		&__text {}
+
+		&__top {
+			color: $color_withe;
+		}
+
+		&__bottom {
+			color: $color_withe;
+		}
+
+		&__label {
+			color: $color_withe;
+		}
+
+		&__props {}
+
+	}
+
+	.callback {}
 }

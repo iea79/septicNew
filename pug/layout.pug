@@ -1,0 +1,127 @@
+-var version = '0.4';
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+
+        link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
+    body
+        header.header
+            .header__content
+                .header__top
+                    .header__left
+                        a.logo(href="/")
+                            img(src="img/logo.png", alt="alt")
+                    .header__right
+                        .action
+                            .action__item
+                                .action__icon
+                                    a.icon_place(href="#")
+                                .action__text.desktop
+                                    a.action__top.action__top_place(href="#") Москва и Московская область
+                                    .action__bottom
+                                        .action__label Время работы:
+                                        .action__props Пн-Вс 7<small>00</small>-20<small>00</small>
+                            .action__item
+                                .action__icon
+                                    a.icon_phone(href="tel: 8 499 444-21-96")
+                                .action__text.desktop
+                                    a.action__top.action__top_tel(href="tel: 8 499 444-21-96") 8 499 444-21-96
+                                    .action__bottom
+                                        .action__label прием заявок 24/7
+                        .callback.desktop
+                            //- i.icon_phone.mobile
+                            button.btn(type="button") Обратный звонок
+
+                .header__bottom
+                    .navbar__toggle
+                    nav.nav
+                        ul.navbar
+                            - var navbar = [{name: 'Главная', anchor: 'index.html'}, {name: 'Сервис септиков', anchor: ''}, {name: 'Каталог септиков', anchor: ''}, {name: 'Запчасти', anchor: ''}, {name: 'Частые вопросы', anchor: ''}, {name: 'Галерея работ', anchor: ''}, {name: 'Контакты', anchor: ''}, {name: 'Акциии', anchor: ''}]
+                            each item in navbar
+                                if item.name === 'Акциии'
+                                    li.navbar__item
+                                        a(href= item.anchor).navbar__link.navbar__link_action= item.name
+                                else if item.name === 'Главная'
+                                    li.navbar__item
+                                        a(href= item.anchor).navbar__link.active= item.name
+                                else
+                                    li.navbar__item
+                                        a(href= item.anchor).navbar__link= item.name
+
+                        .nav__bottom.mobile
+                            a.action__top.action__top_tel(href="tel: 8 499 444-21-96") 8 499 444-21-96
+                            .callback
+                                //- i.icon_phone.mobile
+                                button.btn(type="button") Обратный звонок
+                            .soc
+                                a.icon_fb(href="#") 
+                                a.icon_instagram(href="#") 
+                                a.icon_linkedin(href="#") 
+
+
+
+        main.main_content
+            block content
+
+        footer.footer
+            .container_center
+                .footer__content
+                    .footer__left
+                        a.logo(href="index.html")
+                            img(src="img/logo-contrast.png", alt="")
+                        .soc
+                            a.icon_fb(href="#") 
+                            a.icon_instagram(href="#") 
+                            a.icon_linkedin(href="#") 
+                        .copy.desktop © 2019 Все права защищены.
+
+                    .footer__center.desktop
+                        .footerNav
+                            .footerNav__item
+                                .footerNav__title Компания
+                                ul
+                                    - var navbar = [{name: 'Главная', anchor: '#'}, {name: 'Частые вопросы', anchor: '#'}, {name: 'О компании', anchor: '#'}, {name: 'Контакты', anchor: '#'}];
+                                    each item in navbar
+                                        li
+                                            a(href= item.anchor)= item.name
+                            .footerNav__item
+                                .footerNav__title Сервис
+                                ul
+                                    - var navbar = [{name: 'Сервис септиков', anchor: '#'}, {name: 'Купить септик', anchor: '#'}, {name: 'Запчасти', anchor: '#'}, {name: 'Наши объекты', anchor: '#'}];
+                                    each item in navbar
+                                        li
+                                            a(href= item.anchor)= item.name
+
+                    .footer__right
+                        .action
+                            .action__item
+                                .action__icon.desktop
+                                    a.icon_phone(href="tel: 8 499 444-21-96")
+                                .action__text
+                                    a.action__top.action__top_tel(href="tel: 8 499 444-21-96") 8 499 444-21-96
+                                    .action__bottom
+                                        .action__label прием заявок 24/7
+                                .callback.desktop
+                                    button.btn(type="button") Обратный звонок
+
+                            .action__item
+                                .action__icon.desktop
+                                    .icon_place
+                                .action__text
+                                    a.action__top.action__top_place(href="#") Москва и Московская область
+                                    .action__bottom
+                                        .action__label Время работы:
+                                        .action__props Пн-Вс 7<small>00</small>-20<small>00</small>
+
+                    .callback.mobile
+                        button.btn(type="button") Обратный звонок
+                    .copy.mobile © 2019 Все права защищены.
+
+
+        script(src="js/jquery.js")
+        script(src="js/slick.min.js")
+        script(src="js/function.js?"+version+"")
